@@ -1,8 +1,10 @@
 <script setup>
 
-import Header from "../Home/Header.vue"
-import Input1 from "../Home/Input1.vue"
-import Table1 from "./Table1.vue";
+
+    import Header from '../header.vue';
+    import Input1 from '../Input2.vue';
+    import Table1 from '../Table/Table2.vue';
+    import Subnav from '../Subnav.vue';
 </script>
 
 <template>
@@ -11,8 +13,18 @@ import Table1 from "./Table1.vue";
         <Header> </Header>
 
         <v-card
+            id ="home-card"
+            class="d-flex flex-column mx-auto pe-2 mt-8 pt-10 pb-15 "
+            elevation="2"
+        >
+        <div class ="d-flex flex-column w-100 align-center" style="gap: 2rem;" >
+            <Subnav/>
+        </div>
+        </v-card>
+
+        <v-card
             id ="form1-card"
-            class="d-flex flex-column mx-auto pe-2 mt-8 py-15 px-15"
+            class="d-flex flex-column align-center mx-auto  mt-8 py-15 px-15"
             elevation="2"
         >
 
@@ -127,6 +139,7 @@ import Table1 from "./Table1.vue";
     #form-table-title
     {
         width: 80%;
+        /* border: 1px solid red; */
     }
 
     span{

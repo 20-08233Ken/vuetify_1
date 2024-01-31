@@ -4,17 +4,23 @@
 
 <script setup>
    import Header from "../components/Home/Header.vue"
+
 </script>
 
 <template>
     <div id = "home-main">
         <Header></Header>
 
+
+
+
         <v-card
             id ="home-card"
             class="d-flex flex-column mx-auto pe-2 mt-8 py-15 px-15"
             elevation="2"
         >
+
+       
 
         <v-card-title class="font-weight-bold text-red-darken-4"> Batangas State University Alangilan</v-card-title>
         <v-card-subtitle class="text-grey-darken-3"> College of Engineering</v-card-subtitle>
@@ -31,7 +37,11 @@
                     </v-card-title>
 
                     <span id = "bttn-cont" >
-                        <v-btn id ="add-bttn" class="text-body-2 rounded-0 text-grey-darken-3" color="grey-lighten-2" elevation="0"> Add </v-btn>
+                        
+                        <v-btn id ="add-bttn" class="text-body-2 rounded-0 text-grey-darken-3" color="grey-lighten-2" elevation="0"> 
+                            <router-link to = "/form1" style="text-decoration: none;" class="text-grey-darken-3"> Add </router-link>
+                        </v-btn>
+                        
                         <p class="text-grey-darken-1"> Record of first-time licensure exam takers that pass the licensure exams </p>
                     </span>
                     <span id = "bttn-cont">

@@ -3,12 +3,12 @@
 </style>
 
 <script setup>
-   import Header from "../components/Home/header.vue"
+   import Header from "../components/Home/Header.vue"
 </script>
 
 <template>
     <div id = "home-main">
-        <header/>
+        <Header></Header>
 
         <v-card
             id ="home-card"

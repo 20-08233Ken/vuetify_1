@@ -1,12 +1,14 @@
 <script setup>
 
-import Header from "../Home/header.vue"
+import Header from "../Home/Header.vue"
+import Input1 from "../Home/Input1.vue"
+import Table1 from "./Table1.vue";
 </script>
 
 <template>
 
     <div id="form1-main" class="w-100">
-        <Header/>
+        <Header> </Header>
 
         <v-card
             id ="form1-card"
@@ -27,7 +29,7 @@ import Header from "../Home/header.vue"
 
             <div class="d-flex ml-4 mt-8" id ="form1-monitor">
                     <span class="w-50">
-                        <h3 class="text-body-1 font-weight-bold text-center">
+                        <h3 class="text-body-1 font-weight-bold text-center text-green-accent-4">
                             Submitted
                         </h3>
 
@@ -51,11 +53,10 @@ import Header from "../Home/header.vue"
 
 
             <!-- Form and Table -->
-
             <v-card
-                class=" ml-4 mt-8 rounded-0"
+                class=" ml-4 mt-8 rounded-0 "
                 id ="form-table-title"
-               
+                elevation="0"
             >
                 <v-tabs
                 v-model="tab"
@@ -63,24 +64,52 @@ import Header from "../Home/header.vue"
                 >
                 <v-tab value="one">Form</v-tab>
                 <v-tab value="two">Table</v-tab>
+                <!-- <v-tab value="three">Item Three</v-tab> -->
                 </v-tabs>
 
                 <v-card-text>
                 <v-window v-model="tab">
                     <v-window-item value="one">
-                    
+                        <div class="d-flex flex-column align-center w-100 mt-8">
+                            <Input1/>  
+                        </div>
+                         
                     </v-window-item>
 
                     <v-window-item value="two">
-                    Two
-                    </v-window-item>
-
-                    <v-window-item value="three">
-                    Three
+                        <div class="d-flex flex-column align-center w-100 mt-8">
+                            <Table1/>  
+                        </div>
                     </v-window-item>
                 </v-window>
                 </v-card-text>
             </v-card>
+
+
+            <v-card class="rounded-0 mt-8 ml-4 " elevation = "0" color ="red-darken-4" id ="form1-monitor-title">
+                <v-card-title class="text-body-1 ml-4"> Submit</v-card-title>
+            </v-card>
+
+           
+                <div class="d-flex flex-column mt-8 ml-4 align-center mt-8" id ="form1-monitor-title" >
+                    <Vueform class="w-100" >
+                        <FileElement
+                        name="file"
+                        label="Upload Support File"
+                        :drop="true"
+                        />
+                        
+                    <ButtonElement
+                        name="submit"
+                        button-label="Submit"
+                        :submits="true"
+                        align="right"
+                        :full="true"
+                    
+                    />
+                    </Vueform>         
+                </div>
+  
 
         </v-card>
     </div>

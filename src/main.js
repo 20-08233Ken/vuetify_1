@@ -13,4 +13,14 @@ const vuetify = createVuetify({
   directives,
 })
 
-createApp(App).use(vuetify).mount('#app')
+import Vueform from '@vueform/vueform'
+import vueformConfig from './../vueform.config'
+
+const app = createApp(App)
+app.use(vuetify)
+app.use(Vueform, vueformConfig)
+app.mount('#app')
+
+// createApp(App).
+// use(vuetify).
+// mount('#app')

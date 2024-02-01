@@ -2,7 +2,7 @@
 
 
     import Header from '../header.vue';
-    import Input2 from '../Input2.vue';
+    import Input2 from '../Input/Input2.vue';
     import Table2 from '../Table/Table2.vue';
     import Subnav from '../Subnav.vue';
 </script>

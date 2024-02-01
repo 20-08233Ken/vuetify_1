@@ -1,12 +1,11 @@
 <template>
     <Vueform
-        style="width: 100%; "
       size="lg"
-      
+      style="width: 100%;margin-bottom: 8rem;"
     >
       <SelectElement
-        name="select"
-        style="color: #4B4B4B;"
+      style="color: #4B4B4B;"
+        name="campus"
         :items="[
           {
             value: 0,
@@ -18,13 +17,10 @@
         label="Campus"
         input-type="search"
         autocomplete="off"
-        :floating="false"
-        size="lg"
-        
       />
       <SelectElement
       style="color: #4B4B4B;"
-        name="select_1"
+        name="department"
         :items="[
           {
             value: 0,
@@ -38,9 +34,8 @@
         autocomplete="off"
       />
       <SelectElement
-        
-        name="select_2"
-        style="color: #4B4B4B;"
+      style="color: #4B4B4B;"
+        name="program"
         :items="[
           {
             value: 0,
@@ -53,47 +48,40 @@
         input-type="search"
         autocomplete="off"
       />
-
       <StaticElement
+      style="margin-top: 2rem; color: #D00412; font-size: 18px;font-weight: bold;"
         name="h4"
         tag="h4"
-        content="Number of Enrollments"
-        style="margin-top: 2rem; color: #D00412;"
-        
+        content="Enrolled Students"
       />
-
-
       <TextElement
-        style="color: #4B4B4B;"
-        name="number"
+      style="color: #4B4B4B;"
+        name="req_thesis"
         input-type="number"
         :rules="[
           'nullable',
           'numeric',
         ]"
         autocomplete="off"
-        label="CHED-IDENTIFIED /  RDC-IDENTIFIED PRIORITY PROGRAMS"
+        label="Requiring Thesis/Dissertation"
       />
+
       <TextElement
-        style="color: #4B4B4B;"
-        name="number_1"
+      style="color: #4B4B4B;"
+        name="nreq_thesis"
         input-type="number"
         :rules="[
           'nullable',
           'numeric',
         ]"
         autocomplete="off"
-        label="Neither"
+        label="Not Requiring Thesis/Dissertation"
       />
-
       <ButtonElement
+      style="color: #4B4B4B;"
         name="primaryButton"
         button-label="Add"
         align="right"
-        
-      
-    />
-
+      />
     </Vueform>
   </template>
-

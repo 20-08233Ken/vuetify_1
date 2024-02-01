@@ -7,8 +7,8 @@
 // import Subnav from "../../Subnav.vue"
 
     import Header from "../Header.vue"
-    import Input3 from "../Input/Input3.vue";
-    import Table3 from "../Table/Table3.vue";
+    import Input4 from "../Input/Input4.vue";
+    import Table4 from "../Table/Table4.vue";
     import Subnav from "../Subnav.vue";
 </script>
 
@@ -33,7 +33,7 @@
             elevation="2"
         >
 
-            <v-card-title class="font-weight-bold text-red-darken-4"> CHED-identified and RDC-identified priority programs </v-card-title>
+            <v-card-title class="font-weight-bold text-red-darken-4"> Undergraduate Programs with Accreditation </v-card-title>
             <v-card-subtitle class="text-grey-darken-3"> College of Engineering</v-card-subtitle>
             <v-card-subtitle class="text-grey-darken-3"> Firstname M. Lastname</v-card-subtitle>
 
@@ -60,14 +60,14 @@
                     <v-window v-model="tab">
                         <v-window-item value="one">
                             <div class="d-flex flex-column align-center w-100 mt-8">
-                                <Input3/>  
+                                <Input4/>  
                             </div>
                             
                         </v-window-item>
 
                         <v-window-item value="two">
                             <div class="d-flex flex-column align-center w-100 mt-8">
-                                <Table3/>  
+                                <Table4/>  
                             </div>
                         </v-window-item>
                     </v-window>

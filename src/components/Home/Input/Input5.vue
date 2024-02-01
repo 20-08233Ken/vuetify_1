@@ -1,11 +1,11 @@
 <template>
     <Vueform
-        style="width: 100%;margin-bottom: 10rem;" 
+        class="w-100"
       size="lg"
-    
     >
       <SelectElement
-        name="select"
+      style="color: #4B4B4B;"
+        name="campus"
         :items="[
           {
             value: 0,
@@ -17,21 +17,45 @@
         label="Campus"
         input-type="search"
         autocomplete="off"
-        :floating="false"
-        size="lg"
+      />
+      <SelectElement
+      style="color: #4B4B4B;"
+        name="department"
+        :items="[
+          {
+            value: 0,
+            label: 'Label',
+          },
+        ]"
+        :search="true"
+        :native="false"
+        label="Department"
+        input-type="search"
+        autocomplete="off"
+      />
+      <SelectElement
+      style="color: #4B4B4B;"
+        name="program"
+        :items="[
+          {
+            value: 0,
+            label: 'Label',
+          },
+        ]"
+        :search="true"
+        :native="false"
+        label="Program"
+        input-type="search"
+        autocomplete="off"
       />
       <TextElement
-        name="number_2"
-        input-type="number"
-        :rules="[
-          'nullable',
-          'numeric',
-        ]"
-        autocomplete="off"
-        label="Number"
+      style="color: #4B4B4B;"
+        name="p_position"
+        label="PLANTILLA Position"
       />
       <SelectElement
-        name="select_2"
+      style="color: #4B4B4B;"
+        name="select_3"
         :items="[
           {
             value: 0,
@@ -40,53 +64,20 @@
         ]"
         :search="true"
         :native="false"
-        label="Status"
+        label="Faculty Engagement"
         input-type="search"
         autocomplete="off"
       />
-      <StaticElement
-        name="h4"
-        tag="h4"
-        content="Period of Validity"
-      />
-      <SelectElement
-        name="select_1"
-        :items="[
-          {
-            value: 0,
-            label: 'Label',
-          },
-        ]"
-        :search="true"
-        :native="false"
-        label="Select"
-        input-type="search"
-        autocomplete="off"
-      />
-
-      <DateElement
-        name="date"
-        label="From"
-        :columns="{
-          container: 6,
-        }"
-
-    
-      />
-      <DateElement
-        name="date_1"
-        label="To"
-        :columns="{
-          container: 6,
-        }"
+      <TextElement
+      style="color: #4B4B4B;"
+        name="duration"
+        label="Duration"
       />
       <ButtonElement
+      style="color: #4B4B4B;"
         name="primaryButton"
         button-label="Add"
         align="right"
-        
       />
-    </Vueform
-   
-    >
+    </Vueform>
   </template>

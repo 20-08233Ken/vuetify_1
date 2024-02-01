@@ -1,6 +1,6 @@
 <template>
     <v-data-table-virtual
-      fixed-header
+    fixed-header
       :headers="headers"
       :items="virtualBoats"
       height="600"
@@ -17,12 +17,8 @@
           { title: 'Campus', align: 'start', key: 'campus' },
           { title: 'Department', align: 'end', key: 'department' },
           { title: 'Program', align: 'end', key: 'program' },
-          { title: 'Lastname', align: 'end', key: 'lname' },
-          { title: 'Firstname', align: 'end', key: 'fname' },
-          { title: 'Middle Initial', align: 'end', key: 'mname' },
-          { title: 'Status', align: 'end', key: 'status' },
-          { title: 'Company/Business', align: 'end', key: 'company' },
-
+          { title: 'Requiring Thesis/Dissertation', align: 'end', key: 'req_thesis' },
+          { title: 'Not Requiring Thesis/Dissertation', align: 'end', key: 'nreq_thesis' },
          
         ],
         boats: [
@@ -30,12 +26,8 @@
             campus: 'Pablo Borbon',
             department: 'College of Engineering',
             program: "Bachelor of Science in Civil Engineer",
-            lname:"Lastname",
-            fname:"Firstname",
-            mname:"M",
-            status: "Employed",
-            company:"Company"
-          
+            req_thesis:32,
+            nreq_thesis:32
           },
         ],
       }

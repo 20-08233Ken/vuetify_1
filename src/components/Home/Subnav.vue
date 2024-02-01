@@ -1,8 +1,6 @@
 <script setup>
 
-    import Form1 from './Form/Form1.vue';
-    import Form2 from './Form/Form2.vue';
-    import Form3 from './Form/Form3.vue';
+
 </script>   
 
 
@@ -13,7 +11,7 @@
                 <h3>Higher and Advanced Education</h3>
         </div>
         
-        <div class="d-flex  justify-center w-100" style="gap:3.5rem;">
+        <div class="" id="card-cont">
             <!-- 1 -->
             <router-link to ="/form1" id ="subnav">
                 <v-card   
@@ -21,9 +19,10 @@
                     class="py-4 px-2 rounded-0"
                     id ="subnav-card"
                     style="height: 5rem;"
+
                 >
                     
-                    <v-card-title class="text-subtitle-1 d-flex justify-center align-center mx-auto" style="line-height: normal;" >
+                    <v-card-title class="text-subtitle-1 d-flex justify-center align-center mx-auto" style="line-height: normal;" id="card-text" >
                         Passed first-time licensure <br>exam takers
                     </v-card-title>
                 </v-card>
@@ -60,24 +59,24 @@
     
 
 
-        <div class="d-flex  justify-center w-100" style="gap:3.5rem;">
+        <div class="d-flex  justify-center w-100" id="card-cont">
             
             <!-- 4 -->
-            <router-link to ="/form3" id ="subnav" style="text-decoration: none;height: 5rem;">
+            <router-link to ="/form4" id ="subnav" style="text-decoration: none;height: 5rem;">
                 <v-card   
                     elevation = 5
                     class="py-4 px-2 rounded-0"
                     id ="subnav-card"
                     style="height: 5rem;"
                 >
-                    <v-card-title class="text-subtitle-1 d-flex justify-center align-center mx-auto text-center" style="line-height: normal;">
+                    <v-card-title class="text-subtitle-1 d-flex justify-center align-center mx-auto text-center" style="line-height: normal;" >
                         Undergraduate Programs with <br>Accreditation
                     </v-card-title>
                 </v-card>
             </router-link>
 
             <!-- 5 -->
-            <router-link to ="/form2" id ="subnav" style="text-decoration: none;height: 5rem;">
+            <router-link to ="/form5" id ="subnav" style="text-decoration: none;height: 5rem;">
                 <v-card   
                     elevation = 5
                     class="py-4 px-2 rounded-0"
@@ -91,7 +90,7 @@
             </router-link>
 
             <!-- 6 -->
-            <router-link to ="/form2" id ="subnav" style="text-decoration: none;height: 5rem;">
+            <router-link to ="/form6" id ="subnav" style="text-decoration: none;height: 5rem;">
                 <v-card   
                     elevation = 5
                     class="py-4 px-2 rounded-0"
@@ -104,6 +103,25 @@
                 </v-card>
             </router-link>
         </div>
+
+
+
+        <div class="d-flex  justify-center w-100" style="gap:3.5rem;">    
+            <!-- 7 -->
+            <router-link to ="/form7" id ="subnav" >
+                <v-card   
+                    elevation = 5
+                    class="py-4 px-2 rounded-0"
+                    id ="subnav-card"
+                    style="height: 5rem;"
+                >
+                    <v-card-title class="d-flex justify-center align-center mx-auto text-center" style="line-height: normal;" id="card-text" >
+                        Graduate Students Enrolled in <br>Research Degree Program
+                    </v-card-title>
+                </v-card>
+            </router-link>
+        </div>
+
 </template>
 
 
@@ -123,6 +141,40 @@
     #subnav-card:hover{
         background-color: #94080D;
         color: white;
+        
+    }
+
+    #card-cont{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        gap:1.5rem;
+    }
+
+    #card-text{
+        display: flex;
+
+        font-size: 16px;
+    }
+
+    @media only screen and (max-width: 1600px){
+        /* #card-text{
+            font-size: 12px;
+        } */
+        /* #card-cont{
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+          
+        }
+        #subnav{
+            width: 90%;
+            
+
+        } */
+
+
     }
 
    

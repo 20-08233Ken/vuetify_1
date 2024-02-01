@@ -1,6 +1,6 @@
 <template>
     <v-data-table-virtual
-      fixed-header
+    fixed-header
       :headers="headers"
       :items="virtualBoats"
       height="600"
@@ -17,11 +17,12 @@
           { title: 'Campus', align: 'start', key: 'campus' },
           { title: 'Department', align: 'end', key: 'department' },
           { title: 'Program', align: 'end', key: 'program' },
-          { title: 'Lastname', align: 'end', key: 'lname' },
-          { title: 'Firstname', align: 'end', key: 'fname' },
-          { title: 'Middle Initial', align: 'end', key: 'mname' },
+          { title: 'Year of Initilal Operation', align: 'end', key: 'year_operation' },
+          { title: 'Year of First-batch Graduate', align: 'end', key: 'fbatch_graduate' },
           { title: 'Status', align: 'end', key: 'status' },
-          { title: 'Company/Business', align: 'end', key: 'company' },
+          { title: 'Period of Validty (From)', align: 'end', key: 'f_validity' },
+          { title: 'Period of Validty (To)', align: 'end', key: 't_validity' },
+          { title: 'Remarks', align: 'end', key: 'remarks' },
 
          
         ],
@@ -30,12 +31,13 @@
             campus: 'Pablo Borbon',
             department: 'College of Engineering',
             program: "Bachelor of Science in Civil Engineer",
-            lname:"Lastname",
-            fname:"Firstname",
-            mname:"M",
-            status: "Employed",
-            company:"Company"
-          
+            initial_year:"2024",
+            year_operation:"2021",
+            fbatch_graduate:"2012",
+            status: "Level 3",
+            f_validity:"01/14/2024",
+            t_validity:"02/14/2024",
+            remarks:"Accreditable"
           },
         ],
       }

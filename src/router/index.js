@@ -8,6 +8,10 @@ import Home from "../views/Home.vue"
 import Form1 from "../components/Home/Form/Form1.vue"
 import Form2 from '../components/Home/Form/Form2.vue'
 import Form3 from '../components/Home/Form/Form3.vue'
+import Form4 from '../components/Home/Form/Form4.vue'
+import Form5 from '../components/Home/Form/Form5.vue'
+import Form6 from '../components/Home/Form/Form6.vue'
+import Form7 from '../components/Home/Form/Form7.vue'
 import Login from "../views/Login.vue"
 
 const router = createRouter ({
@@ -37,6 +41,28 @@ const router = createRouter ({
             path:'/form3',
             name:'form3',
             component:Form3
+        },
+        {
+            path:'/form4',
+            name:'form4',
+            component:Form4
+        }
+        ,
+        {
+            path:'/form5',
+            name:'form5',
+            component:Form5
+        }
+        ,
+        {
+            path:'/form6',
+            name:'form6',
+            component:Form6
+        } ,
+        {
+            path:'/form7',
+            name:'form7',
+            component:Form7
         }
         // {
         //     path:'/form1',

@@ -2,8 +2,8 @@
 
 
     import Header from '../header.vue';
-    import Input1 from '../Input2.vue';
-    import Table1 from '../Table/Table2.vue';
+    import Input1 from '../Input/Input1.vue';
+    import Table1 from '../Table/Table1.vue';
     import Subnav from '../Subnav.vue';
 </script>
 

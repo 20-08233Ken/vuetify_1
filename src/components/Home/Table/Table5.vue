@@ -1,6 +1,6 @@
 <template>
     <v-data-table-virtual
-      fixed-header
+    fixed-header
       :headers="headers"
       :items="virtualBoats"
       height="600"
@@ -17,11 +17,9 @@
           { title: 'Campus', align: 'start', key: 'campus' },
           { title: 'Department', align: 'end', key: 'department' },
           { title: 'Program', align: 'end', key: 'program' },
-          { title: 'Lastname', align: 'end', key: 'lname' },
-          { title: 'Firstname', align: 'end', key: 'fname' },
-          { title: 'Middle Initial', align: 'end', key: 'mname' },
-          { title: 'Status', align: 'end', key: 'status' },
-          { title: 'Company/Business', align: 'end', key: 'company' },
+          { title: 'PLANTILLA Position', align: 'end', key: 'p_position' },
+          { title: 'Faculty Engagement', align: 'end', key: 'faculty_engagement' },
+          { title: 'Duration', align: 'end', key: 'duration' },
 
          
         ],
@@ -30,12 +28,10 @@
             campus: 'Pablo Borbon',
             department: 'College of Engineering',
             program: "Bachelor of Science in Civil Engineer",
-            lname:"Lastname",
-            fname:"Firstname",
-            mname:"M",
-            status: "Employed",
-            company:"Company"
-          
+            p_position:"Position",
+            faculty_engagement: "Engagement",
+            duration:"01/14/2024",
+
           },
         ],
       }

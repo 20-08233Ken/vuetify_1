@@ -1,8 +1,10 @@
 <template>
     <v-data-table-virtual
+    
+      fixed-header
       :headers="headers"
       :items="virtualBoats"
-      height="400"
+      height="600"
       item-value="name"
     ></v-data-table-virtual>
 
@@ -42,3 +44,4 @@
     },
   }
 </script>
+

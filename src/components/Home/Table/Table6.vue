@@ -1,56 +1,138 @@
 <template>
-    <v-data-table-virtual
+  <v-table
     fixed-header
-      :headers="headers"
-      :items="virtualBoats"
-      height="600"
-      item-value="name"
-    ></v-data-table-virtual>
+    height="600px"
+  >
+    <thead >
+      <tr>
+        <th class="text-left" id="t-header">
+          <b>Program</b>
+        </th>
+        <th class="text-left" id="t-header">
+         <b>Year of First Batch of Graduates</b>
+        </th>
+        <th class="text-left" id="t-header">
+         <b>Year of Initial Operation</b>
+        </th>
+        <th class="text-left" id="t-header">
+          <b>Status</b>
+        </th>
+        <th class="text-left" id="t-header">
+          <b>Period of validity<br> To</b>
+        </th>
+        <th class="text-left" id="t-header">
+          <b>Period of validity<br> From</b>
+        </th>
+        <th class="text-left" id="t-header">
+          <b>Remarks</b>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        v-for="item in undergrad_accr"
+        :key="item.name"
+      >
+        <td>{{ item.program}}</td>
+        <td>{{ item.in_operation }}</td>
+        <td>{{ item.f_gradautes }}</td>
+        <td>{{ item.status }}</td>
+        <td>{{ item.to_valid }}</td>
+        <td>{{ item.from_valid }}</td>
+        <td>{{ item.remarks }}</td>
 
 
-  </template>
-  <script>
+ 
+      </tr>
+    </tbody>
+  </v-table>
+</template>
+
+<style>
+    #t-header{
+      background-color: #E1F5FE;
+      padding: 1em 1em;
+    }
+</style>
+<script>
   export default {
     data () {
       return {
-        headers: [
-          { title: 'Campus', align: 'start', key: 'campus' },
-          { title: 'Department', align: 'end', key: 'department' },
-          { title: 'Program', align: 'end', key: 'program' },
-          { title: 'Year of Initilal Operation', align: 'end', key: 'year_operation' },
-          { title: 'Year of First-batch Graduate', align: 'end', key: 'fbatch_graduate' },
-          { title: 'Status', align: 'end', key: 'status' },
-          { title: 'Period of Validty (From)', align: 'end', key: 'f_validity' },
-          { title: 'Period of Validty (To)', align: 'end', key: 't_validity' },
-          { title: 'Remarks', align: 'end', key: 'remarks' },
-
-         
-        ],
-        boats: [
-          {
-            campus: 'Pablo Borbon',
-            department: 'College of Engineering',
-            program: "Bachelor of Science in Civil Engineer",
-            initial_year:"2024",
-            year_operation:"2021",
-            fbatch_graduate:"2012",
-            status: "Level 3",
-            f_validity:"01/14/2024",
-            t_validity:"02/14/2024",
-            remarks:"Accreditable"
-          },
-        ],
+        undergrad_accr: [
+        {
+          program: 'Bachelor of Science in Mechanical Engineering',
+          in_operation: 2023,
+          f_gradautes: 2016,
+          status: "Level 1",
+          from_valid:"2022-04-12",
+          to_valid: "2023-01-14",
+          remarks:"Accredited"
+        },
+        {
+          program: 'Bachelor of Science in Mechanical Engineering',
+          in_operation: 2023,
+          f_gradautes: 2016,
+          status: "Level 1",
+          from_valid:"2022-04-12",
+          to_valid: "2023-01-14",
+          remarks:"Accredited"
+        },
+        {
+          program: 'Bachelor of Science in Mechanical Engineering',
+          in_operation: 2023,
+          f_gradautes: 2016,
+          status: "Level 1",
+          from_valid:"2022-04-12",
+          to_valid: "2023-01-14",
+          remarks:"Accredited"
+        },
+        {
+          program: 'Bachelor of Science in Mechanical Engineering',
+          in_operation: 2023,
+          f_gradautes: 2016,
+          status: "Level 1",
+          from_valid:"2022-04-12",
+          to_valid: "2023-01-14",
+          remarks:"Accredited"
+        },
+        {
+          program: 'Bachelor of Science in Mechanical Engineering',
+          in_operation: 2023,
+          f_gradautes: 2016,
+          status: "Level 1",
+          from_valid:"2022-04-12",
+          to_valid: "2023-01-14",
+          remarks:"Accredited"
+        },
+        {
+          program: 'Bachelor of Science in Mechanical Engineering',
+          in_operation: 2023,
+          f_gradautes: 2016,
+          status: "Level 1",
+          from_valid:"2022-04-12",
+          to_valid: "2023-01-14",
+          remarks:"Accredited"
+        },
+        {
+          program: 'Bachelor of Science in Mechanical Engineering',
+          in_operation: 2023,
+          f_gradautes: 2016,
+          status: "Level 1",
+          from_valid:"2022-04-12",
+          to_valid: "2023-01-14",
+          remarks:"Accredited"
+        },
+        {
+          program: 'Bachelor of Science in Mechanical Engineering',
+          in_operation: 2023,
+          f_gradautes: 2016,
+          status: "Level 1",
+          from_valid:"2022-04-12",
+          to_valid: "2023-01-14",
+          remarks:"Accredited"
+        },
+      ],
       }
-    },
-
-    computed: {
-      virtualBoats () {
-        return [...Array(10).keys()].map(i => {
-          const boat = { ...this.boats[i % this.boats.length] }
-          boat.name = `${boat.name} #${i}`
-          return boat
-        })
-      },
     },
   }
 </script>

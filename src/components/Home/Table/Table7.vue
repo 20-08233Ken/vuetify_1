@@ -1,46 +1,75 @@
 <template>
-    <v-data-table-virtual
+  <v-table
     fixed-header
-      :headers="headers"
-      :items="virtualBoats"
-      height="600"
-      item-value="name"
-    ></v-data-table-virtual>
+    height="600px"
+  >
+    <thead >
+      <tr>
+        <th class="text-left" id="t-header">
+          <b>Program</b>
+        </th>
+        <th class="text-left" id="t-header">
+         <b>Requiring Thesis/Dissertation</b>
+        </th>
+        <th class="text-left" id="t-header">
+          <b>Not Requiring Thesis/Dissertation</b>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        v-for="item in ched_json"
+        :key="item.name"
+      >
+        <td>{{ item.program}}</td>
+        <td>{{ item.ched }}</td>
+        <td>{{ item.neither }}</td>
 
 
-  </template>
-  <script>
+ 
+      </tr>
+    </tbody>
+  </v-table>
+</template>
+
+<style>
+    #t-header{
+      background-color: #E1F5FE;
+    }
+</style>
+<script>
   export default {
     data () {
       return {
-        headers: [
-          { title: 'Campus', align: 'start', key: 'campus' },
-          { title: 'Department', align: 'end', key: 'department' },
-          { title: 'Program', align: 'end', key: 'program' },
-          { title: 'Requiring Thesis/Dissertation', align: 'end', key: 'req_thesis' },
-          { title: 'Not Requiring Thesis/Dissertation', align: 'end', key: 'nreq_thesis' },
-         
-        ],
-        boats: [
-          {
-            campus: 'Pablo Borbon',
-            department: 'College of Engineering',
-            program: "Bachelor of Science in Civil Engineer",
-            req_thesis:32,
-            nreq_thesis:32
-          },
-        ],
+        ched_json: [
+        {
+          program: 'Bachelor of Science in Mechanical Engineering',
+          ched: 123,
+          neither: 32,
+  
+        },
+        {
+          program: 'Bachelor of Electrical Engineering',
+          ched: 90,
+          neither: 20,
+        },
+        {
+          program: 'Bachelor of Civil Engineering',
+          ched: 110,
+          neither: 25,
+        },
+        {
+          program: 'Bachelor of Computer Engineering',
+          ched: 80,
+          neither: 15,
+        },
+        {
+          program: 'Bachelor of Aerospace Engineering',
+          ched: 100,
+          neither: 30,
+        },
+      ],
       }
-    },
-
-    computed: {
-      virtualBoats () {
-        return [...Array(10).keys()].map(i => {
-          const boat = { ...this.boats[i % this.boats.length] }
-          boat.name = `${boat.name} #${i}`
-          return boat
-        })
-      },
     },
   }
 </script>

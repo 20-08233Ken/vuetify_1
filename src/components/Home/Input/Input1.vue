@@ -1,73 +1,118 @@
+
 <template>
+  <form id="form_input" class="w-100">
 
-<Vueform class="w-100"
+    <v-select
+      label="Program" 
+      v-model="selected"
+      :items ="json_program"
+      :item-props="itemProps"
+      variant="outlined"
     
->
-    <SelectElement
-      name="program"
-      :items="[
-        {
-          value: 0,
-          label: 'Bachelor of Science in Civil Engineer',
-        },
-        {
-          value: 1,
-          label: 'Bachelor of Science in Chemical Engineer',
-        },
-      ]"
-      :search="true"
-      :native="false"
-      label="Program"
-      input-type="search"
-      autocomplete="off"
-      :floating="false"
-      size="md"
+    ></v-select>
 
-      class="text-grey-darken-1 "
-    />
-    <DateElement
-      name="exam_date"
-      label="Date of Exam"
-      :floating="false"
-      display-format="YYYY-MM-DD"
-      size="md"
-      class="text-grey-darken-1 "
-    />
-    <TextElement
-      name="takers"
-      input-type="number"
-      :rules="[
-        'nullable',
-        'numeric',
-      ]"
-      autocomplete="off"
-      label="Number of Takers"
-      size="md"
-      class="text-grey-darken-1 "
-    />
-    <TextElement
-      name="passers"
-      input-type="number"
-      :rules="[
-        'nullable',
-        'numeric',
-      ]"
-      autocomplete="off"
-      label="Number of passers"
-      size="md"
-      class="text-grey-darken-1 "
-    
-    />
+    <v-text-field v-model="exam_date" label="Exam Date" variant="outlined" type="date"></v-text-field>
+    <v-text-field v-model="passers" label="Number of Takers" variant="outlined" type="number"></v-text-field>
+    <v-text-field v-model="takers" label="Number of Passers" variant="outlined" type="number"></v-text-field>
+
+  <v-file-input
+    show-size
+    counter
+    multiple
+    label="File input"
+  ></v-file-input>
 
 
-    <ButtonElement
-      name="submit"
-      button-label="Add"
-      :submits="true"
-      align="right"
-      :full="true"
-      
-    />
-  </Vueform>
+    <div class="d-flex w-100  justify-end" style=" gap: 1em;">
+      <span class="w-25">     
+        <v-btn
+        block
+        class="text-none text-subtitle-1"
+        size="x-large"
+        variant="flat"
+        @click="addData"
+      >
+        Add
+      </v-btn>
+    </span>
+
+    <span class="w-25"> 
+      <v-btn
+        block
+        class="text-none text-subtitle-1"
+        color="teal-accent-4"
+        size="x-large"
+        variant="flat"  
+        disabled  
+      >
+        Submit
+      </v-btn>
+    </span>
+    </div>
+
+
+  </form>
 </template>
-<!-- style="margin-top:1rem;padding-bottom: 10rem;" -->
+
+<style scoped>
+
+</style>
+
+<script >
+    import {ref} from "vue"
+    const selected = ref('')
+    const exam_date = ref('')
+    const passers = ref()
+    const takers = ref()
+
+
+
+
+    export default{
+
+      data(){
+        return{
+            selected:'',
+            exam_date:'',
+            passers:null,
+            takers:null,
+
+            
+            json_program:[
+              {
+                program:"Bachelor of Science in Ceramics Engineering"
+              },
+              {
+                program:"Bachelor of Science in Chemical Engineering"
+              },
+              {
+                program:"Bachelor of Science in Food Engineering"
+              },
+              {
+                program:"Bachelor of Science in Metallurgical Engineering"
+              },
+            ]
+        }
+      },
+      methods: {
+         addData(){
+
+        console.log(this.selected.program)
+        console.log(this.exam_date)
+        console.log(this.passers)
+        console.log(this.takers)
+
+        this.selected =''
+        this.exam_date =''
+        this.passers =''
+        this.takers =''
+
+      },
+      itemProps(item){
+        return{
+          title:item.program
+        }
+      }
+      }
+    }
+</script>

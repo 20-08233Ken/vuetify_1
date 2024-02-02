@@ -1,50 +1,155 @@
 <template>
-    <v-data-table-virtual
+  <v-table
     fixed-header
-      :headers="headers"
-      :items="virtualBoats"
-      height="600"
-      item-value="name"
-    ></v-data-table-virtual>
+    height="600px"
+  >
+    <thead >
+      <tr>
+        <th class="text-left" id="t-header">
+          <b>Program</b>
+        </th>
+        <th class="text-left" id="t-header">
+         <b>Name</b>
+        </th>
+        <th class="text-left" id="t-header">
+          <b>PLANTILLA Position</b>
+        </th>
+        <th class="text-left" id="t-header">
+          <b>Faculty Engagement</b>
+        </th>
+        <th class="text-left" id="t-header">
+          <b>Duration</b>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        v-for="item in grad_research"
+        :key="item.name"
+      >
+        <td>{{ item.program}}</td>
+        <td>{{ item.fname + " " + item.mname + " "+item.lname }}</td>
+        <td>{{ item.position }}</td>
+        <td>{{ item.engagement }}</td>
+        <td>{{ item.duration }}</td>
+ 
+      </tr>
+    </tbody>
+  </v-table>
+</template>
 
-
-  </template>
-  <script>
+<style>
+    #t-header{
+      background-color: #E1F5FE;
+      padding: 1em 1em;
+    }
+</style>
+<script>
   export default {
     data () {
       return {
-        headers: [
-          { title: 'Campus', align: 'start', key: 'campus' },
-          { title: 'Department', align: 'end', key: 'department' },
-          { title: 'Program', align: 'end', key: 'program' },
-          { title: 'PLANTILLA Position', align: 'end', key: 'p_position' },
-          { title: 'Faculty Engagement', align: 'end', key: 'faculty_engagement' },
-          { title: 'Duration', align: 'end', key: 'duration' },
-
-         
-        ],
-        boats: [
-          {
-            campus: 'Pablo Borbon',
-            department: 'College of Engineering',
-            program: "Bachelor of Science in Civil Engineer",
-            p_position:"Position",
-            faculty_engagement: "Engagement",
-            duration:"01/14/2024",
-
-          },
-        ],
+        grad_research: [
+        {
+          program: 'Bachelor of Science in Mechanical Engineering',
+          fname: "Ken",
+          mname: "L.",
+          lname: "Rolloque",
+          position: "Associate Director",
+          engagement: "Level 1",
+          duration:"23"
+        },
+        {
+          program: 'Bachelor of Science in Mechanical Engineering',
+          fname: "Ken",
+          mname: "L.",
+          lname: "Rolloque",
+          position: "Associate Director",
+          engagement: "Level 1",
+          duration:"23"
+        },
+        {
+          program: 'Bachelor of Science in Mechanical Engineering',
+          fname: "Ken",
+          mname: "L.",
+          lname: "Rolloque",
+          position: "Associate Director",
+          engagement: "Level 1",
+          duration:"23"
+        },
+        {
+          program: 'Bachelor of Science in Mechanical Engineering',
+          fname: "Ken",
+          mname: "L.",
+          lname: "Rolloque",
+          position: "Associate Director",
+          engagement: "Level 1",
+          duration:"23"
+        },
+        {
+          program: 'Bachelor of Science in Mechanical Engineering',
+          fname: "Ken",
+          mname: "L.",
+          lname: "Rolloque",
+          position: "Associate Director",
+          engagement: "Level 1",
+          duration:"23"
+        },
+        {
+          program: 'Bachelor of Science in Mechanical Engineering',
+          fname: "Ken",
+          mname: "L.",
+          lname: "Rolloque",
+          position: "Associate Director",
+          engagement: "Level 1",
+          duration:"23"
+        },
+        {
+          program: 'Bachelor of Science in Mechanical Engineering',
+          fname: "Ken",
+          mname: "L.",
+          lname: "Rolloque",
+          position: "Associate Director",
+          engagement: "Level 1",
+          duration:"23"
+        },
+        {
+          program: 'Bachelor of Science in Mechanical Engineering',
+          fname: "Ken",
+          mname: "L.",
+          lname: "Rolloque",
+          position: "Associate Director",
+          engagement: "Level 1",
+          duration:"23"
+        },
+        {
+          program: 'Bachelor of Science in Mechanical Engineering',
+          fname: "Ken",
+          mname: "L.",
+          lname: "Rolloque",
+          position: "Associate Director",
+          engagement: "Level 1",
+          duration:"23"
+        },
+        {
+          program: 'Bachelor of Science in Mechanical Engineering',
+          fname: "Ken",
+          mname: "L.",
+          lname: "Rolloque",
+          position: "Associate Director",
+          engagement: "Level 1",
+          duration:"23"
+        },
+        {
+          program: 'Bachelor of Science in Mechanical Engineering',
+          fname: "Ken",
+          mname: "L.",
+          lname: "Rolloque",
+          position: "Associate Director",
+          engagement: "Level 1",
+          duration:"23"
+        },
+      ],
       }
-    },
-
-    computed: {
-      virtualBoats () {
-        return [...Array(10).keys()].map(i => {
-          const boat = { ...this.boats[i % this.boats.length] }
-          boat.name = `${boat.name} #${i}`
-          return boat
-        })
-      },
     },
   }
 </script>

@@ -74,28 +74,7 @@
                 </v-card-text>
             </v-card>
             
-            <v-card class="rounded-0 mt-8 ml-4 " elevation = "0" color ="red-darken-4" id ="form1-monitor-title">
-                <v-card-title class="text-body-1 ml-4"> Submit</v-card-title>
-            </v-card>
 
-            <div class="d-flex flex-column mt-8 ml-4 align-center mt-8" id ="form1-monitor-title" >
-                    <Vueform class="w-100" >
-                        <FileElement
-                        name="file"
-                        label="Upload Support File"
-                        :drop="true"
-                        />
-                        
-                    <ButtonElement
-                        name="submit"
-                        button-label="Submit"
-                        :submits="true"
-                        align="right"
-                        :full="true"
-                    
-                    />
-                    </Vueform>         
-                </div>
             
   
 

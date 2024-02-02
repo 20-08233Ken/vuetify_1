@@ -1,10 +1,15 @@
 <script setup>
 
+// import Header from "../Home/Header.vue"
+// import Header from "../../Home/header.vue"
+// import Input3 from "../../Home/Input3.vue"
+// import Table2 from "../Table2.vue";
+// import Subnav from "../../Subnav.vue"
 
-    import Header from '../header.vue';
-    import Input2 from '../Input/Input2.vue';
-    import Table2 from '../Table/Table2.vue';
-    import Subnav from '../Subnav.vue';
+    import Header from "../Header.vue"
+    import Input6 from "../Input/Input6.vue";
+    import Table6 from "../Table/Table6.vue";
+    import Subnav from "../Subnav.vue";
 </script>
 
 <template>
@@ -28,7 +33,7 @@
             elevation="2"
         >
 
-            <v-card-title class="font-weight-bold text-red-darken-4"> Employed Graduates </v-card-title>
+            <v-card-title class="font-weight-bold text-red-darken-4"> Graduate Programs with Accreditation </v-card-title>
             <v-card-subtitle class="text-grey-darken-3"> College of Engineering</v-card-subtitle>
             <v-card-subtitle class="text-grey-darken-3"> Firstname M. Lastname</v-card-subtitle>
 
@@ -55,22 +60,21 @@
                     <v-window v-model="tab">
                         <v-window-item value="one">
                             <div class="d-flex flex-column align-center w-100 mt-8">
-                                <Input2/>  
+                                <Input6/>  
                             </div>
                             
                         </v-window-item>
 
                         <v-window-item value="two">
                             <div class="d-flex flex-column align-center w-100 mt-8">
-                                <Table2/>  
+                                <Table6/>  
                             </div>
                         </v-window-item>
                     </v-window>
                 </v-card-text>
             </v-card>
             
-            
-            
+
   
 
         </v-card>

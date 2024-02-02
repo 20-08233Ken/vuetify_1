@@ -7,8 +7,8 @@
 // import Subnav from "../../Subnav.vue"
 
     import Header from "../Header.vue"
-    import Input3 from "../Input3.vue";
-    import Table2 from "../Table/Table2.vue";
+    import Input3 from "../Input/Input3.vue";
+    import Table3 from "../Table/Table3.vue";
     import Subnav from "../Subnav.vue";
 </script>
 
@@ -67,36 +67,15 @@
 
                         <v-window-item value="two">
                             <div class="d-flex flex-column align-center w-100 mt-8">
-                                <Table2/>  
+                                <Table3/>  
                             </div>
                         </v-window-item>
                     </v-window>
                 </v-card-text>
             </v-card>
             
-            <v-card class="rounded-0 mt-8 ml-4 " elevation = "0" color ="red-darken-4" id ="form1-monitor-title">
-                <v-card-title class="text-body-1 ml-4"> Submit</v-card-title>
-            </v-card>
 
-            <div class="d-flex flex-column mt-8 ml-4 align-center mt-8" id ="form1-monitor-title" >
-                    <Vueform class="w-100" >
-                        <FileElement
-                        name="file"
-                        label="Upload Support File"
-                        :drop="true"
-                        />
-                        
-                    <ButtonElement
-                        name="submit"
-                        button-label="Submit"
-                        :submits="true"
-                        align="right"
-                        :full="true"
-                    
-                    />
-                    </Vueform>         
-                </div>
-            
+           
   
 
         </v-card>

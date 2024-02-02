@@ -1,46 +1,139 @@
 <template>
-    <v-data-table-virtual
-      :headers="headers"
-      :items="virtualBoats"
-      height="400"
-      item-value="name"
-    ></v-data-table-virtual>
+  <v-table
+    fixed-header
+    height="600px"
+  >
+    <thead >
+      <tr>
+        <th class="text-left" id="t-header">
+          <b>Name</b>
+        </th>
+        <th class="text-left" id="t-header">
+         <b>Program</b>
+        </th>
+        <th class="text-left" id="t-header">
+          <b>Status</b>
+        </th>
+        <th class="text-left" id="t-header">
+          <b>Company's Name</b>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        v-for="item in employed_grad"
+        :key="item.name"
+      >
+        <td>{{ item.fname +" "+item.mname+" "+item.lname }}</td>
+        <td>{{ item.program }}</td>
+        <td>{{ item.status }}</td>
+        <td>{{ item.company }}</td>
 
+ 
+      </tr>
+    </tbody>
+  </v-table>
+</template>
 
-  </template>
-  <script>
+<style>
+    #t-header{
+      background-color: #E1F5FE;
+    }
+</style>
+<script>
   export default {
     data () {
       return {
-        headers: [
-          { title: 'Campus', align: 'start', key: 'campus' },
-          { title: 'Department', align: 'end', key: 'department' },
-          { title: 'Program', align: 'end', key: 'program' },
-          { title: 'CHED-IDENTIFIED / RDC-IDENTIFIED PRIORITY PROGRAMS', align: 'end', key: 'ched' },
-          { title: 'Neither', align: 'end', key: 'neither' },
-         
-        ],
-        boats: [
-          {
-            campus: 'Pablo Borbon',
-            department: 'College of Engineering',
-            program: "Bachelor of Science in Civil Engineer",
-            ched: 212,
-            neither:32
-          
-          },
-        ],
+        employed_grad: [
+        {
+          program: 'Bachelor of Science in Mechanical Engineering',
+          fname: 'Ken',
+          lname: 'Rolloque',
+          mname: 'L.',
+          status: 'Employed',
+          company: 'Company A',
+        },
+        {
+          program: 'Bachelor of Electrical Engineering',
+          fname: 'Jessica',
+          lname: 'Smith',
+          mname: 'M.',
+          status: 'Employed',
+          company: 'Company B',
+        },
+        {
+          program: 'Bachelor of Civil Engineering',
+          fname: 'Alex',
+          lname: 'Johnson',
+          mname: 'R.',
+          status: 'Employed',
+          company: 'Company C',
+        },
+        {
+          program: 'Bachelor of Computer Engineering',
+          fname: 'Ryan',
+          lname: 'Garcia',
+          mname: 'S.',
+          status: 'Employed',
+          company: 'Company D',
+        },
+        {
+          program: 'Bachelor of Aerospace Engineering',
+          fname: 'Emily',
+          lname: 'Nguyen',
+          mname: 'T.',
+          status: 'Employed',
+          company: 'Company E',
+        },
+        {
+          program: 'Bachelor of Computer Engineering',
+          fname: 'Ryan',
+          lname: 'Garcia',
+          mname: 'S.',
+          status: 'Employed',
+          company: 'Company D',
+        },
+        {
+          program: 'Bachelor of Aerospace Engineering',
+          fname: 'Emily',
+          lname: 'Nguyen',
+          mname: 'T.',
+          status: 'Employed',
+          company: 'Company E',
+        },
+        {
+          program: 'Bachelor of Computer Engineering',
+          fname: 'Ryan',
+          lname: 'Garcia',
+          mname: 'S.',
+          status: 'Employed',
+          company: 'Company D',
+        },
+        {
+          program: 'Bachelor of Aerospace Engineering',
+          fname: 'Emily',
+          lname: 'Nguyen',
+          mname: 'T.',
+          status: 'Employed',
+          company: 'Company E',
+        },        {
+          program: 'Bachelor of Computer Engineering',
+          fname: 'Ryan',
+          lname: 'Garcia',
+          mname: 'S.',
+          status: 'Employed',
+          company: 'Company D',
+        },
+        {
+          program: 'Bachelor of Aerospace Engineering',
+          fname: 'Emily',
+          lname: 'Nguyen',
+          mname: 'T.',
+          status: 'Employed',
+          company: 'Company E',
+        },
+      ],
       }
-    },
-
-    computed: {
-      virtualBoats () {
-        return [...Array(10).keys()].map(i => {
-          const boat = { ...this.boats[i % this.boats.length] }
-          boat.name = `${boat.name} #${i}`
-          return boat
-        })
-      },
     },
   }
 </script>

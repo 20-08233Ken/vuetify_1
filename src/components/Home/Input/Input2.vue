@@ -2,24 +2,11 @@
 <template>
   <form id="form_input" class="w-100">
 
-    <!-- <v-select
-      label="Campus" 
-      v-model="selected_camp"
-      :items="['Bachelor of Science in Computer Engineer', 'Bachelor of Science in Computer Engineer', 'Bachelor of Science in Computer Engineer']"
-      variant="outlined"
-      disabled
-    
-    ></v-select> -->
+
     <v-text-field v-model="json_campus[0].campus" label="" variant="outlined" type="text" disabled></v-text-field>
     <v-text-field v-model="json_department[0].department" label="" variant="outlined" type="text" disabled></v-text-field>
 
-    <!-- <v-select
-      label="Department" 
-      v-model="selected_dep"
-      :items="['Bachelor of Science in Computer Engineer', 'Bachelor of Science in Computer Engineer', 'Bachelor of Science in Computer Engineer']"
-      variant="outlined"
-    
-    ></v-select> -->
+
 
     <v-select
       label="Program" 

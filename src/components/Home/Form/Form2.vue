@@ -5,6 +5,7 @@
     import Input2 from '../Input/Input2.vue';
     import Table2 from '../Table/Table2.vue';
     import Subnav from '../Subnav.vue';
+    import Subnav2 from '../Subnav2.vue';
 </script>
 
 <template>
@@ -13,13 +14,11 @@
         <Header> </Header>
 
         <v-card
-            id ="home-card"
-            class="d-flex flex-column mx-auto pe-2 mt-8 pt-10 pb-15 "
-            elevation="2"
+            class="d-flex flex-column mx-auto mt-8 py-15 px-15"
+            id ="nav-card"
         >
-        <div class ="d-flex flex-column w-100 justify-center" style="gap: 2rem;" >
-            <Subnav/>
-        </div>
+            <Subnav2/>
+       
         </v-card>
 
         <v-card

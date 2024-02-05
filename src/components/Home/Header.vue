@@ -7,7 +7,10 @@
                         <img id ="univ-logo" src="../../assets/img/school.png" alt="">
                         <v-toolbar-title class="d-flex-row align-center">
                         
-                        University MIS
+                        <router-link to="/" style="text-decoration: none;" class="text-white">
+                            University MIS
+                        </router-link>
+
                         </v-toolbar-title>
             </v-toolbar>
         </div>
